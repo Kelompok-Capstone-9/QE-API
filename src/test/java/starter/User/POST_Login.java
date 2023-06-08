@@ -85,6 +85,11 @@ public class POST_Login {
         SerenityRest.given().header("Content-Type", "application/json").body(reqBody.toString()).post(setValidPOSTLoginEndpoint());
     }
 
+    @Step("received valid POST HTTP response code 401 unauthorized for login")
+    public void validateHTTPResponseCode401ForLogin(){
+        restAssuredThat(response -> response.statusCode(401));
+    }
+
     @Step("send POST HTTP request with invalid email for login")
     public void sendPOSTHTTPRequestWithInvalidEmailForLogin(){
         String body = "{\"email\":\"riza#gmail.com\", \"password\": \"riza123\" }";

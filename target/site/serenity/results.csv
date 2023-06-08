@@ -1,2 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"POST - Login","As a user i want to login with valid endpoint","FAILURE","2023-06-05T13:26:03.522+07:00[Asia/Bangkok]","0.0","2.58"
+"DELETE - User Data By ID","As a user i want to delete user data by ID","SUCCESS","2023-06-08T12:41:42.881+07:00[Asia/Bangkok]","0.0","4.68"

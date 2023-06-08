@@ -69,4 +69,9 @@ public class POST_LoginSteps {
     public void userSendPOSTHTTPRequestWithInvalidEmailForLogin() {
         post_login.sendPOSTHTTPRequestWithInvalidEmailForLogin();
     }
+
+    @Then("user received valid POST HTTP response code {int} Unauthorized for login")
+    public void userReceivedValidPOSTHTTPResponseCodeUnauthorizedForLogin(int arg0) {
+        post_login.validateHTTPResponseCode401ForLogin();
+    }
 }
