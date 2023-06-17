@@ -9,8 +9,8 @@ import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 
 public class GET_All_User_Data {
 
-    public String validEndpointUserData = "http://18.141.56.154:8000/users?page=1";
-    public String invalidEndpointUserData = "http://18.141.56.154:8000/user?page=1";
+    public String validEndpointUserData = "http://18.141.56.154:8000/users";
+    public String invalidEndpointUserData = "http://18.141.56.154:8000/user";
 
     @Step("set valid GET all user data endpoint")
     public String setValidGETAllUserDataEndpoint(){

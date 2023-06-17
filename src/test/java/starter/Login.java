@@ -17,7 +17,7 @@ public class Login {
 
     @Step("send authentication endpoint")
     public void sendAuthenticationEndpoint(){
-        String body = "{\"email\":\"riza@gmail.com\", \"password\": \"riza123\" }";
+        String body = "{\"email\":\"QEadmin@gmail.com\", \"password\": \"qeadmin123\" }";
 
         JSONObject reqBody = new JSONObject(body);
 

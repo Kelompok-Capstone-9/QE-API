@@ -1,6 +1,7 @@
 package starter.stepdefinitions;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
@@ -73,5 +74,15 @@ public class DELETE_User_By_IDSteps {
     @Then("user received valid DELETE HTTP response code {int} for user data by ID")
     public void userReceivedValidDELETEHTTPResponseCodeForUserDataByID(int arg0) {
         delete_user_by_id.validateDELETEHTTPResponseCode401ForUserDataByID();
+    }
+
+    @Given("admin set valid DELETE user data by ID endpoint without token")
+    public void adminSetValidDELETEUserDataByIDEndpointWithoutToken() {
+        delete_user_by_id.setValidDELETEUserDataByIDEndpointWithoutToken();
+    }
+
+    @When("admin send DELETE HTTP request with valid endpoint for user data by ID without token")
+    public void adminSendDELETEHTTPRequestWithValidEndpointForUserDataByIDWithoutToken() {
+        delete_user_by_id.sendDELETEHTTPRequestWithValidEndpointForUserDataByIDWithoutToken();
     }
 }

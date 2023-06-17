@@ -1,2 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"DELETE - User Data By ID","As a user i want to delete user data by ID","SUCCESS","2023-06-08T12:41:42.881+07:00[Asia/Bangkok]","0.0","4.68"
+"DELETE - User Data By ID","As a admin i want to delete user data by ID without token","SUCCESS","2023-06-17T10:26:19.752+07:00[Asia/Bangkok]","0.0","2.64"

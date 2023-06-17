@@ -9,8 +9,8 @@ import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 import static org.hamcrest.Matchers.equalTo;
 
 public class PUT_Edit_User_Data_By_ID {
-    public String valid_url_edit_user_data_by_ID = "http://18.141.56.154:8000/users/44";
-    public String invalid_url_edit_user_data_by_ID = "http://18.141.56.154:8000/user/44";
+    public String valid_url_edit_user_data_by_ID = "http://18.141.56.154:8000/users/13";
+    public String invalid_url_edit_user_data_by_ID = "http://18.141.56.154:8000/user/13";
     public String invalid_ID_url_edit_user_data_by_ID ="http://18.141.56.154:8000/users/40";
 
     @Step("set valid PUT user data by ID endpoint")
@@ -21,7 +21,7 @@ public class PUT_Edit_User_Data_By_ID {
     @Step("send PUT HTTP request with valid endpoint for user data by ID")
     public void sendPUTHTTPRequestWithValidEndpointForUserDataByID(){
 
-        String body = "{\"name\": \"jennie kim\"}";
+        String body = "{\"name\": \"rizania fayza\"}";
 
         JSONObject rBody = new JSONObject(body);
 
@@ -35,7 +35,7 @@ public class PUT_Edit_User_Data_By_ID {
 
     @Step("user received valid user data by ID")
     public void validateValidUserDataByID(){
-        restAssuredThat(response->response.body("data.name",equalTo("jennie kim")));
+        restAssuredThat(response->response.body("data.name",equalTo("rizania fayza")));
     }
 
     @Step("set invalid PUT user data by ID endpoint")
@@ -46,7 +46,7 @@ public class PUT_Edit_User_Data_By_ID {
     @Step("send PUT HTTP request with invalid endpoint for user data by ID")
     public void sendPUTHTTPRequestWithInvalidEndpointForUserDataByID(){
 
-        String body = "{\"name\": \"jennie kim\"}";
+        String body = "{\"name\": \"rizania fayza\"}";
 
         JSONObject rBody = new JSONObject(body);
 
@@ -61,7 +61,7 @@ public class PUT_Edit_User_Data_By_ID {
     @Step("send PUT HTTP request with invalid method for user data by ID")
     public void sendPUTHTTPRequestWithInvalidMethodForUserDataByID(){
 
-        String body = "{\"name\": \"jennie kim\"}";
+        String body = "{\"name\": \"rizania fayza\"}";
 
         JSONObject rBody = new JSONObject(body);
 
@@ -81,7 +81,7 @@ public class PUT_Edit_User_Data_By_ID {
     @Step("send PUT HTTP request with invalid ID for user data by ID")
     public void sendPUTHTTPRequestWithInvalidIDForUserDataByID(){
 
-        String body = "{\"name\": \"jennie kim\"}";
+        String body = "{\"name\": \"rizania fayza\"}";
 
         JSONObject rBody = new JSONObject(body);
 

@@ -8,9 +8,10 @@ import starter.Login_User;
 import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 
 public class DELETE_User_By_ID {
-    public String validUrlUserByID = "http://18.141.56.154:8000/users/41";
-    public String invalidUrlUserByID = "http://18.141.56.154:8000/user/41";
-    public String invalidIDUrl = "http://18.141.56.154:8000/users/2";
+    public String validUrlUserByID = "http://18.141.56.154:8000/users/14";
+    public String invalidUrlUserByID = "http://18.141.56.154:8000/user/14";
+    public String invalidIDUrl = "http://18.141.56.154:8000/users/40";
+    public String validUrlWithoutToken = "http://18.141.56.154:8000/users/15";
 
     @Step("set valid DELETE user data by ID endpoint")
     public String setValidDELETEUserDataByIDEndpoint(){
@@ -70,5 +71,15 @@ public class DELETE_User_By_ID {
     @Step("received valid DELETE HTTP response code 401 for user data by ID")
     public void validateDELETEHTTPResponseCode401ForUserDataByID(){
         restAssuredThat(response -> response.statusCode(401));
+    }
+
+    @Step("set valid DELETE user data by ID endpoint without token")
+    public String setValidDELETEUserDataByIDEndpointWithoutToken(){
+        return validUrlWithoutToken;
+    }
+
+    @Step("send DELETE HTTP request with valid endpoint for user data by ID without token")
+    public void sendDELETEHTTPRequestWithValidEndpointForUserDataByIDWithoutToken(){
+        SerenityRest.delete(setValidDELETEUserDataByIDEndpointWithoutToken());
     }
 }

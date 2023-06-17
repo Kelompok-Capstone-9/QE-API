@@ -9,9 +9,9 @@ import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 import static org.hamcrest.Matchers.equalTo;
 
 public class GET_User_Data_By_ID {
-    public String validEndpointUserByID = "http://18.141.56.154:8000/users/9";
-    public String invalidEndpointUserByID = "http://18.141.56.154:8000/user/9";
-    public String validEndpoint = "http://18.141.56.154:8000/users/44";
+    public String validEndpointUserByID = "http://18.141.56.154:8000/users/4";
+    public String invalidEndpointUserByID = "http://18.141.56.154:8000/user/4";
+    public String validEndpoint = "http://18.141.56.154:8000/users/13";
     public String invalidIDEndpoint = "http://18.141.56.154:8000/users/2";
 
     @Step("set valid GET user data by ID endpoint")
@@ -31,9 +31,9 @@ public class GET_User_Data_By_ID {
 
     @Step("user received valid user data by ID")
     public void validateValidUserDataByID(){
-        restAssuredThat(response->response.body("data.name",equalTo("riza")));
-        restAssuredThat(response->response.body("data.email",equalTo("riza@gmail.com")));
-        restAssuredThat(response->response.body("data.gender",equalTo("wanita")));
+        restAssuredThat(response->response.body("data.name",equalTo("Administrator QE")));
+        restAssuredThat(response->response.body("data.email",equalTo("QEadmin@gmail.com")));
+        restAssuredThat(response->response.body("data.gender",equalTo("pria")));
     }
 
     @Step("set invalid GET user data by ID endpoint")

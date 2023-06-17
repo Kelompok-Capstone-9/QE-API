@@ -26,8 +26,8 @@ Feature: DELETE - User Data By ID
 
   @GFIT-User033
   Scenario: As a admin i want to delete user data by ID without token
-    Given admin set valid DELETE user data by ID endpoint
-    When admin send DELETE HTTP request with valid endpoint for user data by ID
+    Given admin set valid DELETE user data by ID endpoint without token
+    When admin send DELETE HTTP request with valid endpoint for user data by ID without token
     Then admin received valid DELETE HTTP response code 400 Bad Request for user data by ID
 
   @GFIT-User034
